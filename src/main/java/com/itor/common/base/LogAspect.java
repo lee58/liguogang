@@ -24,12 +24,17 @@ import java.util.Arrays;
 public class LogAspect {
     private JSONObject jsonObject = new JSONObject();
 
-    // 定义切点 表示拦截controller包下的所有类中的所有方法
+    /**
+     * 定义切点 表示拦截controller包下的所有类中的所有方法
+     */
     @Pointcut("execution(public * com.itor.controller.*.*(..))")
     private void pointcut() {
     }
 
-    // 请求method前打印内容
+    /**
+     * 请求method前打印内容
+     * @param joinPoint
+     */
     @Before(value = "pointcut()")
     public void before(JoinPoint joinPoint) {
         ServletRequestAttributes requestAttributes = (ServletRequestAttributes) RequestContextHolder
@@ -47,7 +52,10 @@ public class LogAspect {
         }
     }
 
-    // 在方法执行完结后打印返回内容
+    /**
+     * 在方法执行完结后打印返回内容
+     * @param o
+     */
     @AfterReturning(returning = "o", pointcut = "pointcut()")
     public void after(Object o) {
         try {
