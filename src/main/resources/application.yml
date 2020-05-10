@@ -1,5 +1,7 @@
 server:
   port: 1011
+  tomcat:
+    basedir: /basedir/temp
 spring:
   # 数据库连接信息
   datasource:
@@ -10,3 +12,19 @@ spring:
     driver-class-name: com.mysql.cj.jdbc.Driver
     #使用druid数据源
     type: com.alibaba.druid.pool.DruidDataSource
+  # freemarker
+  freemarker:
+    suffix: .ftl
+    content-type: text/html
+    enabled: true
+    # 缓存
+    cache: false
+    template-loader-path: classpath:/templates/
+    charset: UTF-8
+    allow-request-override: false
+    check-template-location: true
+    expose-session-attributes: false
+    expose-request-attributes: false
+    expose-spring-macro-helpers: false
+    settings:
+      number_format: 0.##

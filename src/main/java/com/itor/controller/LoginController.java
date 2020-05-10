@@ -11,9 +11,10 @@ import org.springframework.web.bind.annotation.ResponseBody;
 @Controller
 public class LoginController {
 
+    private static final String LOGIN = "login/login";
+
     @GetMapping("/login")
-    @ResponseBody
     public String login() {
-        return "login";
+        return LOGIN;
     }
 }
