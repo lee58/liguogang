@@ -34,7 +34,7 @@
         </div>
     </div>
 </div>
-<img src="img/a6.jpg">
+
 </body>
 
 
