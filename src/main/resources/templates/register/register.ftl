@@ -42,7 +42,7 @@
                 <input type="password" id="confirm_password" name="confirm_password" class="form-control" placeholder="请再次输入密码">
             </div>
             <button type="submit" class="btn btn-primary block full-width m-b">注 册</button>
-            <p class="text-muted text-center"><small>已经有账户了？</small><a href="login.html">点此登录</a></p>
+            <p class="text-muted text-center"><small>已经有账户了？</small><a href="/">点此登录</a></p>
         </form>
     </div>
 </div>
