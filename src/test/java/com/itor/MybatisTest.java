@@ -21,7 +21,7 @@ public class MybatisTest {
 
     @Test
     public void addUserEntity() {
-        int i = userMapper.addUserEntity(new UserEntity("大都督", "952051088@qq.com"));
+        int i = userMapper.addUserEntity(new UserEntity("大都督", "952051088@qq.com", "111111"));
         System.out.println("addUserEntity:" + i);
     }
 }

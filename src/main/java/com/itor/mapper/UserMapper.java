@@ -3,6 +3,7 @@ package com.itor.mapper;
 import com.itor.entity.UserEntity;
 import org.apache.ibatis.annotations.Insert;
 import org.apache.ibatis.annotations.Mapper;
+import org.apache.ibatis.annotations.Select;
 
 /**
  * @author 大都督
@@ -11,6 +12,9 @@ import org.apache.ibatis.annotations.Mapper;
 @Mapper
 public interface UserMapper {
 
-    @Insert("insert into user(name, email) values(#{name}, #{email})")
+    @Insert("insert into user(name, email, password) values(#{name}, #{email}, #{password})")
     public int addUserEntity(UserEntity userEntity);
+
+    @Select("select * from user where email = #{email}")
+    UserEntity findUserByEmail(String email);
 }
