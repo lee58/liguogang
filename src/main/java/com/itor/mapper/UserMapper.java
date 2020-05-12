@@ -17,4 +17,7 @@ public interface UserMapper {
 
     @Select("select * from user where email = #{email}")
     UserEntity findUserByEmail(String email);
+
+    @Select("select * from user where email = #{email} and password = #{password}")
+    UserEntity findUserByEmailAndPassword(UserEntity user);
 }
