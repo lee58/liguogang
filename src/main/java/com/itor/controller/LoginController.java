@@ -31,7 +31,6 @@ public class LoginController {
     @PostMapping("/login")
     @ResponseBody
     public String postLogin(UserEntity user) {
-
         return loginService.postLogin(user);
     }
 
