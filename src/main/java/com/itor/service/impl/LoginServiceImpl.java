@@ -6,6 +6,8 @@ import com.itor.service.LoginService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import javax.servlet.http.HttpSession;
+
 /**
  * @author 大都督
  * @create 2020/5/12
@@ -17,11 +19,13 @@ public class LoginServiceImpl implements LoginService {
     UserMapper userMapper;
 
     @Override
-    public String postLogin(UserEntity user) {
+    public String postLogin(UserEntity user, HttpSession session) {
         UserEntity userEntity = userMapper.findUserByEmailAndPassword(user);
         if (userEntity == null) {
             return "用户名或密码错误";
         }
+        session.setAttribute("userId", userEntity.getId());
+        session.setAttribute("email", userEntity.getEmail());
         return "success";
     }
 }

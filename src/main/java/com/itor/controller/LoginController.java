@@ -10,6 +10,8 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import javax.servlet.http.HttpSession;
+
 /**
  * @author 大都督
  * @create 2020/5/10
@@ -30,8 +32,8 @@ public class LoginController {
 
     @PostMapping("/login")
     @ResponseBody
-    public String postLogin(UserEntity user) {
-        return loginService.postLogin(user);
+    public String postLogin(UserEntity user, HttpSession session) {
+        return loginService.postLogin(user, session);
     }
 
     /**
