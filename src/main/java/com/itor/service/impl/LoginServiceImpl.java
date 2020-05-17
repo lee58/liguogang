@@ -25,7 +25,7 @@ public class LoginServiceImpl implements LoginService {
             return "用户名或密码错误";
         }
         session.setAttribute("userId", userEntity.getId());
-        session.setAttribute("email", userEntity.getEmail());
+        session.setAttribute("name", userEntity.getName());
         return "success";
     }
 }
