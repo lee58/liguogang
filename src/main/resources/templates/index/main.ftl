@@ -50,7 +50,7 @@
         }
         div.userInfo {
             width: 100px;
-            float: right;
+            float: left;
             height: 100%;
         }
         div.userInfo span {
@@ -61,13 +61,49 @@
         }
         .settings {
             float: right;
-            height: 66%;
+            height: 100%;
             width: 66px;
-            margin-top: 22px;
+        }
+        #settings {
+            float: right;
+            width: 33px;
+            margin: 35px 77px 0 0;
+            cursor: pointer;
+        }
+        div.settings ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0 32px 0 0;
+            float: right;
+            width: 77px;
+            display: none;
+        }
+        div.settings ul li a:link,div.settings ul li a:visited
+        {
+            display:block;
+            font-weight:bold;
+            color:#FFFFFF;
+            background-color:#bebebe;
+            width:77px;
+            text-align:left;
+            padding:4px;
+            text-decoration:none;
+            text-transform:uppercase;
+        }
+        div.settings ul li a:hover,div.settings ul li a:active
+        {
+            background-color:#cc0000;
         }
         .main {
             position: absolute;
             margin: 66px 0px 0px 10px;
+        }
+        div.userInfo img {
+            width: 50px;
+            height: 50px;
+            border-style: solid dotted dashed double;
+            border-radius: 100%;
+            margin: 2px 0 1px 80px;
         }
 
     </style>
@@ -75,117 +111,47 @@
 <body>
     <div class="container">
         <div class="head">
+            <div class="userInfo">
+                <img src="../../img/1.jpeg"/>
+            </div>
             <div class="logo">
                 <span>LIGG</span>
             </div>
             <div class="search">
                 <input type="text" id="search"/>
             </div>
-            <div class="userInfo">
-                <span>登陆</span>
+            <div class="settings">
+                <span id="settings">
+                    设置
+                </span>
+                <ul>
+                    <li><a href="/backstageManagement" target="_blank">后台管理</a></li>
+                </ul>
             </div>
-            <span class="settings">
-                设置
-            </span>
         </div>
         <div class="main">
-            aaaa
-            <br>bbb
-            aaaa
-            <br>aabbbaa
-            <br>aabddddccccbbbbaa
-            <br>aaaa
-            <br>aaaa
-            <br>aaaa
-            <br>aaaa
-            <br>aaaa
-            <br>aaaa
-            <br>aaaa
-            <br>aaaa
-            <br>aaaa
-            <br>aaaa
-            <br>aaaa
-            <br>aaaa
-            <br>aaaa
-            <br>aaaa
-            <br>aaaa
-            <br>aaaa
-            <br>aaaa
-            <br>aaaa
-            <br>aaaa
-            <br>aaaa
-            <br>aaaa
-            <br>aaaa
-            <br>aaaa
-            <br>aaaa
-            <br>aaaa
-            <br>aaaa
-            <br>aaaa
-            <br>aaaa
-            <br>aaaa
-            <br>aaaa
-            <br>aaaa
-            <br>aaaa
-            <br>aaaa
-            <br>aaaa
-            <br>aaaa
-            <br>aaaa
-            <br>aaaa
-            <br>aaaa
-            <br>aaaa
-            <br>aaaa
-            <br>aaaa
-            <br>aaaa
-            <br>aaaa
-            <br>aaaa
-            <br>aaaa
-            <br>aaaa
-            <br>aaaa
-            <br>aaaa
-            <br>aaaa
-            <br>aaaa
-            <br>aaaa
-            <br>aaaa
-            <br>aaaa
-            <br>aaaa
-            <br>aaaa
-            <br>aaaa
-            <br>aaaa
-            <br>aaaa
-            <br>aaaa
-            <br>aaaa
-            <br>aaaa
-            <br>aaaa
-            <br>aaaa
-            <br>aaaa
-            <br>aaaa
-            <br>aaaa
-            <br>aaaa
-            <br>aaaa
-            <br>aaaa
-            <br>aaaa
-            <br>aaaa
-            <br>aaaa
-            <br>aaaa
-            <br>aaaa
-            <br>aaaa
-            <br>aaaa
-            <br>aaaa
-            <br>aaaa
-            <br>aaaa
-            <br>aaaa
-            <br>aaaa
-            <br>aaaa
-            <br>aaaa
-            <br>aaaa
-            <br>aaaa
-            <br>
+           开发中...
         </div>
 
     </div>
+    <script src="../../js/jquery.min.js?v=2.1.4"></script>
+    <script>
+        $(function() {
 
-<script>
+            $("#settings").mouseover(function () {
+                showSettings();
+            });
 
-</script>
+        });
+
+        function showSettings() {
+           $("div.settings ul").show().mouseout(function () {
+               hideSettings();
+           });
+        }
+        function hideSettings() {
+            $("div.settings ul").hide();
+        }
+    </script>
 </body>
 </html>
