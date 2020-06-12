@@ -5,21 +5,16 @@
     <title>后台管理</title>
     <style>
         body {
-            text-align: center;
             margin: 0;
             padding: 0;
             border: 0;
             background: #fdfcf8;
-            font-family: PingFangSC-Regular, Verdana, Arial, 微软雅黑, 宋体;
-            font-size: 14px;
         }
         div.container {
             margin: 0 auto;
             padding: 0;
             border: 0;
             width: 1239px;
-            text-align: left;
-            background: #fdfcf8;
         }
         div.logo {
             width: 222px;
@@ -30,62 +25,39 @@
         }
         div.navLeft {
             float: left;
-            margin: 0 0px 0 8px;
             padding: 0;
             border: 0;
             width: 180px;
+            background: transparent;
+            margin: 20px 0 0 10px;
         }
         div.navLeft h2 {
             font-size: 14px;
-            margin: 0;
-            padding: 10px 0 5px 10px;
-            color: #000;
-            display: block;
-            border-bottom: 0px solid #ddd;
-            font-weight: bold;
-            border: 0;
-            margin-block-start: 0.83em;
-            margin-block-end: 0.83em;
-            margin-inline-start: 0px;
-            margin-inline-end: 0px;
+            margin: 5px 0;
+            padding: 0;
         }
         div.navLeft ul {
-            margin: 0;
-            padding: 0;
-            border: 0;
-            padding-inline-start: 20px;
-        }
-        div.navLeft ul li {
             list-style: none;
-            margin: 0;
+            margin: 0 5px;
             padding: 0;
-            border: 0;
-            display: list-item;
-            text-align: -webkit-match-parent;
+            font-size: 14px;
         }
-        div.navLeft ul li a{
-            display: block;
-            padding: 5px 0 5px 15px;
-            font-size: 12px;
-            border-bottom: 0px solid #ddd;
-            margin: 0;
-            border: 0;
-        }
-        div.navLeft ul li a:link, div.navLeft ul li a:visited {
+        div.navLeft ul li a {
             text-decoration: none;
-            color: #000000;
-            background: transparent;
+            font-size: 12px;
+            color: #443b3bd9;
         }
-        div.mainContent {
+        div.mainContent{
             float: left;
-            margin: 0;
-            padding: 30px 5px 30px 5px;
-            border: 1px solid #bbb2b2;
-            min-height: 888px;
-            width: 1030px;
-            background: transparent;
+            width: 1019px;
+            margin: 20px 5px 10px 5px;
+            padding: 0px;
             word-break: break-all;
         }
+
+
+
+
     </style>
 </head>
 <body>
@@ -97,14 +69,18 @@
         <div class="navLeft">
             <h2>CSS 基础教程</h2>
             <ul>
-                <li class="currentLink"><a href="/css/index.asp">CSS 教程</a></li>
-                <li><a href="/css/css_jianjie.asp">CSS 简介</a></li>
+                <li class="">
+                    <a href="#">CSS 教程</a>
+                </li>
+                <li>
+                    <a href="#">CSS 简介</a>
+                </li>
 
             </ul>
             <h2>CSS 样式</h2>
             <ul>
-                <li><a href="/css/css_background.asp">CSS 背景</a></li>
-                <li><a href="/css/css_text.asp">CSS 文本</a></li>
+                <li><a href="#">CSS 背景</a></li>
+                <li><a href="#">CSS 文本</a></li>
 
             </ul>
         </div>
@@ -113,5 +89,13 @@
         </div>
     </div>
     <script src="../../js/jquery.min.js?v=2.1.4"></script>
+<script>
+    $(function() {
+        $("li a").click(function () {
+            $("li a.currentLink").removeClass("currentLink").css("color", "#443b3bd9");
+            $(this).addClass("currentLink").css("color", "#a417def5");
+        });
+    });
+</script>
 </body>
 </html>

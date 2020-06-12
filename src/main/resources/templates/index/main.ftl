@@ -59,36 +59,35 @@
             width: 100%;
             float: right;
         }
-        .settings {
+        div.settings {
             float: right;
             height: 100%;
-            width: 66px;
+            width: 100px;
         }
         #settings {
-            float: right;
-            width: 33px;
-            margin: 35px 77px 0 0;
+            float: left;
             cursor: pointer;
+            margin-top: 30px;
         }
         div.settings ul {
             list-style-type: none;
             margin: 0;
             padding: 0 32px 0 0;
-            float: right;
+            float: left;
             width: 77px;
             display: none;
         }
         div.settings ul li a:link,div.settings ul li a:visited
         {
-            display:block;
-            font-weight:bold;
-            color:#FFFFFF;
-            background-color:#bebebe;
-            width:77px;
-            text-align:left;
-            padding:4px;
-            text-decoration:none;
-            text-transform:uppercase;
+            display: block;
+            font-weight: bold;
+            color: #FFFFFF;
+            background-color: #bebebe;
+            width: 77px;
+            text-align: left;
+            padding: 4px;
+            text-decoration: none;
+            text-transform: uppercase;
         }
         div.settings ul li a:hover,div.settings ul li a:active
         {
@@ -97,6 +96,7 @@
         .main {
             position: absolute;
             margin: 66px 0px 0px 10px;
+            word-break: break-all;
         }
         div.userInfo img {
             width: 50px;
