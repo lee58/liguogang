@@ -13,12 +13,26 @@ $("#settings").mouseover(function () {
     showSettings();
 });
 
+function getMethodPath(methodPath) {
+    $.post(methodPath, {}, function (page) {
+        $("div.main").html(page);
+    })
+}
+
 $("#search").change(function () {
     var searchContent = $(this).val();
     if (!searchContent) {
         return;
     }
     $.post("/search", {"key":searchContent}, function (ul) {
-        $("div.search").append(ul ? ul : "");
+        if (!ul) {
+            return;
+        }
+        $("div.search").append(ul);
+        $("div.search ul li").click(function () {
+            var methodPath = $(this).attr("methodPath");
+            $(this).parent().remove();
+            getMethodPath(methodPath);
+        });
     })
 });

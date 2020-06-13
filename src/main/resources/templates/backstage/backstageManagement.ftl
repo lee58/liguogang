@@ -13,7 +13,7 @@
         <div class="navLeft">
             <h2>日常工具</h2>
             <ul>
-                <li class=""><a methodPath="/calendar">日 历</a></li>
+                <li><a methodPath="/calendar">日 历</a></li>
             </ul>
             <h2>工作便利</h2>
             <ul>
