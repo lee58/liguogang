@@ -1,6 +1,9 @@
 package com.itor.controller;
 
+import com.itor.service.SearchService;
 import org.apache.commons.lang3.StringUtils;
+import org.apache.ibatis.annotations.Param;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
@@ -21,8 +24,8 @@ public class IndexController {
     private static final String INDEX = "index/main";
     // 登录页
     private static final String LOGIN = "login/login";
-    // 代理模式页
-    private static final String PROXY_PATTERN = "java/designPattern/proxyPattern";
+
+
 
     /**
      * 跳转到主页
@@ -39,25 +42,4 @@ public class IndexController {
         return INDEX;
     }
 
-    /**
-     * 返回li标签的html页面
-     * @return
-     */
-    @GetMapping("/getHtmlByValue")
-    public String getHtmlByValue(String li) {
-        return PROXY_PATTERN;
-    }
-
-    @GetMapping("/getText")
-    @ResponseBody
-    public String getText() {
-        return "this is text response";
-    }
-
-    @GetMapping("/getJsonText")
-    @ResponseBody
-    public String getJsonText() {
-
-        return "[{'attr': 'val'}]";
-    }
 }
