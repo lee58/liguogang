@@ -35,9 +35,9 @@ public class IndexController {
     public String main(HttpSession session, Map<String, String> map) {
         Object userId = session.getAttribute("userId");
         String name = (String) session.getAttribute("name");
-        if (StringUtils.isEmpty(name)) {
-            return LOGIN;
-        }
+//        if (StringUtils.isEmpty(name)) {
+//            return LOGIN;
+//        }
         map.put("name", name);
         return INDEX;
     }

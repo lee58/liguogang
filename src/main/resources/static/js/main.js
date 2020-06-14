@@ -20,6 +20,7 @@ function getMethodPath(methodPath) {
 }
 
 $("#search").change(function () {
+    $(this).parent().find("ul").remove();
     var searchContent = $(this).val();
     if (!searchContent) {
         return;
