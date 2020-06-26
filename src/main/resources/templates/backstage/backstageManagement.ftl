@@ -19,6 +19,14 @@
             <ul>
                 <li><a methodPath="/vehicleInsurance">车 险</a></li>
             </ul>
+            <h2>I/O流</h2>
+            <ul>
+                <li><a methodPath="/copyFile">提取文件</a></li>
+            </ul>
+            <h2>用户管理</h2>
+            <ul>
+                <li><a methodPath="/userList">用户列表</a></li>
+            </ul>
         </div>
         <div class="mainContent">
 
