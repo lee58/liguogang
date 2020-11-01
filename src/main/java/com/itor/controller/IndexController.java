@@ -22,10 +22,6 @@ public class IndexController {
 
     // 主页
     private static final String INDEX = "index/main";
-    // 登录页
-    private static final String LOGIN = "login/login";
-
-
 
     /**
      * 跳转到主页
@@ -41,5 +37,6 @@ public class IndexController {
         map.put("name", name);
         return INDEX;
     }
+
 
 }
